@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  background: #f3f7fa;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  max-width: 754px;
+  width: 100%;
+  background: #f3f7fa;
+  border-radius: 8px;
+}
+
+.right {
+  flex: 3;
+  margin-left: 20px;
+}
+
+.left {
+  flex: 1;
+  max-width: 232px;
+}
+
+.button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
