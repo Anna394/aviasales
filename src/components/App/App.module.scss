@@ -3,7 +3,7 @@
 .wrapper {
   background: #f3f7fa;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: center;
 }
@@ -36,4 +36,19 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.icon {
+  position: relative;
+  width: 60px; /* ширина блока */
+  height: 60px; /* высота блока */
+  margin: 20px auto;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
 }

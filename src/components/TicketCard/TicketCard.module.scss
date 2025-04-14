@@ -1,55 +1,188 @@
-.ticketCard {
-  display: flex;
-  height: auto;
-  background-color: #ffffff;
-  flex-direction: column;
-  padding: 20px;
-  gap: 20px;
-
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-.info {
-  display: flex;
-}
-
-.city,
-.time,
-.transfer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-
-  span:first-child {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18px;
-    color: #a0b0b9;
-  }
-
-  span:nth-child(2) {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    color: #4a4a4a;
-  }
-}
-
-.title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.price {
+p:first-child {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #a0b0b9;
+}
+
+p:nth-child(2) {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #4a4a4a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+// img {
+//   vertical-align: top;
+//   max-width: 100%;
+//   height: auto;
+// }
+
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/* Main flight card */
+.flightCard {
+  width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "price none logo"
+    "infoThere timeThere transfersThere"
+    "infoBack timeBack transfersBack";
+  gap: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px #0000001a;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.price {
   color: #2196f3;
+  font-size: 24px;
+  font-weight: 600;
+  grid-area: price;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.infoThere {
+  grid-area: infoThere;
+}
+
+.timeThere {
+  grid-area: timeThere;
+}
+
+.transfersThere {
+  grid-area: transfersThere;
+}
+
+.infoBack {
+  grid-area: infoBack;
+}
+
+.timeBack {
+  grid-area: timeBack;
+}
+
+.transfersBack {
+  grid-area: transfersBack;
+}
+
+.topText {
+  color: #a0b0b9;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* General */
+:root {
+  font-family: Open Sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #f3f7fa;
+  color: #000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
 }

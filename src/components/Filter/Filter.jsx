@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const filters = useSelector((state) => state);
+  const filters = useSelector((state) => state.filter);
+
   return (
     <div className={styles.filter}>
       <h3 className={styles.title}>КОЛИЧЕСТВО ПЕРЕСАДОК</h3>
@@ -19,40 +20,32 @@ const Filter = () => {
       <label className={styles.checkbox}>
         <input
           type="checkbox"
-          onChange={() =>
-            dispatch({ type: "TOGGLE_FILTER", payload: "noTransfer" })
-          }
-          checked={filters.noTransfer}
+          onChange={() => dispatch({ type: "TOGGLE_FILTER", payload: "0" })}
+          checked={filters[0]}
         />
         <span>Без пересадок</span>
       </label>
       <label className={styles.checkbox}>
         <input
           type="checkbox"
-          onChange={() =>
-            dispatch({ type: "TOGGLE_FILTER", payload: "oneTransfer" })
-          }
-          checked={filters.oneTransfer}
+          onChange={() => dispatch({ type: "TOGGLE_FILTER", payload: "1" })}
+          checked={filters[1]}
         />
         <span>1 пересадка</span>
       </label>
       <label className={styles.checkbox}>
         <input
           type="checkbox"
-          onChange={() =>
-            dispatch({ type: "TOGGLE_FILTER", payload: "twoTransfer" })
-          }
-          checked={filters.twoTransfer}
+          onChange={() => dispatch({ type: "TOGGLE_FILTER", payload: "2" })}
+          checked={filters[2]}
         />
         <span>2 пересадки</span>
       </label>
       <label className={styles.checkbox}>
         <input
           type="checkbox"
-          onChange={() =>
-            dispatch({ type: "TOGGLE_FILTER", payload: "threeTransfer" })
-          }
-          checked={filters.threeTransfer}
+          onChange={() => dispatch({ type: "TOGGLE_FILTER", payload: "3" })}
+          checked={filters[3]}
         />
         <span>3 пересадки</span>
       </label>

@@ -1,9 +1,9 @@
 const initialState = {
   all: false,
-  noTransfer: false,
-  oneTransfer: false,
-  twoTransfer: false,
-  threeTransfer: false,
+  0: false,
+  1: false,
+  2: false,
+  3: true,
 };
 
 export default function filterReduser(state = initialState, action) {
